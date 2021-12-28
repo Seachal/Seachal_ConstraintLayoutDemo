@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seachal.constraintlayoutdemo.MainActivity">
+
+    <!--
+
+layout_constraintDimensionRatio中 H与W的区别
+
+结论
+
+1、不写H，也不写W的情况下， 表示  宽高比
+
+2、写了H 和 不写H 效果是一样的，都是 表示  宽高比
+
+3、加了 “W,”  表示 倒置 分数的意义，  表示  高宽比， 看清楚，高在前，宽在后。别看岔了
+
+
+    -->
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="Hello World!"
+        android:textColor="@android:color/white"
+        app:layout_constraintDimensionRatio="w,1:3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:layout_constrainedWidth="true"
+        android:text="字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字"
+        app:layout_constraintLeft_toRightOf="@+id/img1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@+id/img1"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintLeft_toRightOf="@+id/img1" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="30"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img2"
+        app:layout_constraintLeft_toRightOf="@+id/img2" />
+
+
+<!--    和文字的底部对齐 -->
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:text="°C"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text2"
+        app:layout_constraintBottom_toBottomOf="@+id/text2"
+        app:layout_constraintLeft_toRightOf="@+id/text2" />
+
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="40"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@+id/img2" />
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:text="mg/m³"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/text4"
+        app:layout_constraintTop_toTopOf="@+id/text4" />
+
+
+</android.support.constraint.ConstraintLayout>

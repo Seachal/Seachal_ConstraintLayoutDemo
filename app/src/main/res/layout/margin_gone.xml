@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+
+        <TextView
+            android:id="@+id/tv_cl_1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/red"
+            android:text="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cl_2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/yellow"
+            app:layout_constraintStart_toEndOf="@+id/tv_cl_1"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_cl2_1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/red"
+            android:text="1"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cl2_2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:background="@color/yellow"
+            app:layout_constraintStart_toEndOf="@+id/tv_cl2_1"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_cl6_1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/red"
+            android:text="1"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cl6_2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:background="@color/yellow"
+            app:layout_constraintStart_toEndOf="@+id/tv_cl6_1"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_cl3_1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/red"
+            android:text="1"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cl3_2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/yellow"
+            android:text=" app:layout_goneMarginStart=40dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_cl3_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="40dp" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_cl5_1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/red"
+            android:text="1"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cl5_2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@color/yellow"
+            android:text="同时设置了 gone和 gonemargin,如果参考的元素没有 gone, 则只有 margin值生效，goneMargin不生效"
+            app:layout_constraintStart_toEndOf="@+id/tv_cl5_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="180dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_cl4_11"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/red"
+            android:text="1"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cl4_21"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/yellow"
+            android:text="gone_margin_在参考的 view gone时， margin值才会生效"
+            app:layout_constraintStart_toEndOf="@+id/tv_cl4_11"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="120dp" />
+        <!--这种特定的行为可以做到特殊的布局，
+        比如上图A消失时B位置不变，设A宽度为100，边距为10，
+        B对A约束为20，那么goneMargin=100+10+20=130，
+        则可以实现A隐藏后B位置不变。-->
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_cl4_1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/red"
+            android:text="1"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cl4_2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/yellow"
+            android:text="如果两边都设置的约束，那么 marginGone就不起作用了"
+            app:layout_constraintStart_toEndOf="@+id/tv_cl4_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="120dp" />
+        <!--这种特定的行为可以做到特殊的布局，
+        比如上图A消失时B位置不变，设A宽度为100，边距为10，
+        B对A约束为20，那么goneMargin=100+10+20=130，
+        则可以实现A隐藏后B位置不变。-->
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray_4">
+
+
+        <TextView
+            android:id="@+id/tv_cl7_1"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/red"
+            android:text="1"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/tv_cl7_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_goneMarginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/tv_cl7_2"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:background="@color/yellow"
+            android:text="gone_margin_在参考的 view gone时， margin值才会生效"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <!--这种特定的行为可以做到特殊的布局，
+        比如上图A消失时B位置不变，设A宽度为100，边距为10，
+        B对A约束为20，那么goneMargin=100+10+20=130，
+        则可以实现A隐藏后B位置不变。-->
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
+
+    <!--https://www.jianshu.com/p/60162337fb2d  -->

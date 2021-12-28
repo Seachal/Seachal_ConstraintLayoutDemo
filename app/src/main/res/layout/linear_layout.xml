@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/yellow"
+            android:text="hhhh" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/red"
+            android:text="hhhh"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/blue"
+            android:text="hhhh" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/ll_1"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/yellow"
+            android:text="hhhh" />
+
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/tv_1"
+            android:background="@color/red"
+            android:text="hhhh"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/tv_2"
+            android:background="@color/blue"
+            android:text="hhhh" />
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_1"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/rl">
+
+        <TextView
+            android:id="@+id/tv_c1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/yellow"
+            android:text="hhhh"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <TextView
+            android:id="@+id/lb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="赠送"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@id/tv_c1"
+            app:layout_constraintTop_toBottomOf="@id/tv_c1" />
+
+        <TextView
+            android:id="@+id/tv_return_atoshi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@id/lb1"
+            app:layout_constraintLeft_toRightOf="@id/lb1" />
+
+        <TextView
+            android:id="@+id/lb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="枚原子币"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/lb1"
+            app:layout_constraintLeft_toRightOf="@id/tv_return_atoshi" />
+
+        <TextView
+            android:id="@+id/lb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="赠送"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/lb1"
+            app:layout_constraintTop_toBottomOf="@id/lb1" />
+
+        <TextView
+            android:id="@+id/tv_return_power"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@id/lb3"
+            app:layout_constraintLeft_toRightOf="@id/lb3" />
+
+        <TextView
+            android:id="@+id/lb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="原力"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_return_power"
+            app:layout_constraintLeft_toRightOf="@id/tv_return_power" />
+
+<!--        <android.support.constraint.Group-->
+<!--            android:id="@+id/group_return_money"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:constraint_referenced_ids="lb1,lb2,lb3,lb4,tv_return_atoshi,tv_return_power"-->
+<!--            android:visibility="gone"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_c2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:background="@color/red"-->
+<!--            android:text="hhhh"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/tv_c1" />-->
+
+
+        <TextView
+            android:id="@+id/tv_c3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/blue"
+            android:text="hhhh"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lb1" />
+
+<!--   app:layout_constraintTop_toBottomOf="@id/lb1" lb1 等一组都 gone了，  tv_c3 会在 lb1下面
+   app:layout_constraintTop_toBottomOf="@id/lb4"，    因为 lb4 参考的lb1也 gone了，所以
+   造成 tv_c3  和 parent 对齐了。
+
+   所以：总结，如果参考的view 他参考的 view，没有 gone 掉，那么tv_c3 就会参考tv_c1
+        如果参考的 view，他参考的 view 也 gone 了。那么tv_c3 就找不到参考了，即不会参考tv_c1
+   -->
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

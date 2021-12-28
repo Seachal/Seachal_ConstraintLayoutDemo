@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/flow1"
+        android:layout_width="55dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="124dp"
+        android:background="#612"
+        android:gravity="center"
+        android:text="flow1"
+        android:textColor="@android:color/white"
+        tools:visibility="visible"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/flow2"
+        android:layout_width="63dp"
+        android:layout_height="51dp"
+        android:layout_marginRight="148dp"
+        android:layout_marginBottom="32dp"
+        android:background="#612"
+        android:gravity="center"
+        android:text="flow2"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--
+    1.
+    其中 constraint_referenced_ids 指定限定源id,多个id用逗号隔开
+
+    barrierDirection 指定限制的方向 , 有 left, right, top, bottom, start, end, 6种
+
+2.
+
+     app:barrierAllowsGoneWidgets="false",flow1,flow2 基准线还会保持在 gone 之前的位置。
+barrierAllowsGoneWidgets：默认为 true，即当 Barrier 引用的控件被 GONE 掉时，则 Barrier
+默认的创建行为是在已 GONE 掉控件的已解析位置上进行创建。如果设置为 false，则不会将 GONE 掉的控件考虑在内。
+
+2.2 测试，
+
+
+
+3.
+  app:barrierDirection="right"
+    以 flow1,flow2 的右侧生成基准线，
+    -->
+    <android.support.constraint.Barrier
+        android:id="@+id/id_barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierAllowsGoneWidgets="false"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="flow1,flow2" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/id_barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierAllowsGoneWidgets="true"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="flow1,flow2" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="54dp"
+        android:layout_height="46dp"
+        android:background="@android:color/holo_red_dark"
+        android:gravity="center"
+        android:text="see"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/id_barrier1"
+        app:layout_constraintRight_toRightOf="@+id/id_barrier2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

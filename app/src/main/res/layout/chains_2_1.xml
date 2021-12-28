@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:text="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="3" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="3" />
+    </LinearLayout>
+
+
+    <!--b、c width 都为 0，weight 1 ,生效了-->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/yellow">
+
+        <Button
+            android:id="@+id/a"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="a weight"
+            android:textAllCaps="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/b"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/b"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="b222222222222233333333333333333"
+            android:lines="1"
+            android:textAllCaps="false"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/a"
+            app:layout_constraintRight_toLeftOf="@id/c"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/c"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="c222222222222233333333333333333"
+            android:lines="1"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/b"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+    <!-- ConstraintLayout weight 和 LinearLayout 使用方式类似，都是占剩余空间的比例。参看上面案例
+      layout_constraintWidth_percent 是占父空间的百分比。参看下面案例。
+      -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/yellow">
+
+        <Button
+            android:id="@+id/a1"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="a1 percent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/b1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="b1"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintLeft_toRightOf="@id/a1"
+            app:layout_constraintRight_toLeftOf="@id/c1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/c1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="c1"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintLeft_toRightOf="@id/b1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/yellow">
+
+        <Button
+            android:id="@+id/aA1"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="aA1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/bA1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bA1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="bA1"
+            app:layout_constraintWidth_percent="1"
+            app:layout_constraintLeft_toRightOf="@id/aA1"
+            app:layout_constraintRight_toLeftOf="@id/cC1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cC1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="cC1"
+            app:layout_constraintWidth_percent="1"
+            app:layout_constraintLeft_toRightOf="@id/bA1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+</LinearLayout>

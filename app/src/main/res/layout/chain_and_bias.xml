@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- spread chain ,spread(默认)-元素被分散开-->
+
+    <TextView
+        android:id="@+id/tab1"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="tab1:spread"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tab2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tab2"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="tab2"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@+id/tab1"
+        app:layout_constraintRight_toLeftOf="@+id/tab3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tab3"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab3"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/tab2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- spread inside chain ,与spread类似，只是链条的端点不会被分散-->
+
+    <TextView
+        android:id="@+id/tab4"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="tab4:spread inside"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tab5"
+        app:layout_constraintTop_toBottomOf="@+id/tab1" />
+
+    <TextView
+        android:id="@+id/tab5"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="tab5"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@+id/tab4"
+        app:layout_constraintRight_toLeftOf="@+id/tab6"
+        app:layout_constraintTop_toBottomOf="@+id/tab1" />
+
+    <TextView
+        android:id="@+id/tab6"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab6"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@+id/tab5"
+        app:layout_constraintRight_toLeftOf="@id/tab61"
+        app:layout_constraintTop_toBottomOf="@+id/tab1" />
+
+    <TextView
+        android:id="@+id/tab61"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab61"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toRightOf="@+id/tab6"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab1" />
+
+    <!--同时还有两种组合，在链条里面，可以使用weight和bias：-->
+
+
+    <!-- weighted chain,  -->
+    <!--在链条里还可以设置 weight，spread + weight-将元素的尺寸设置为MATCH_CONSTRAINT时，可以与weight平分空间-->
+    <TextView
+        android:id="@+id/tab7"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="tab7:weighted"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tab8"
+        app:layout_constraintTop_toBottomOf="@+id/tab4" />
+
+    <TextView
+        android:id="@+id/tab8"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="tab8"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/tab7"
+        app:layout_constraintRight_toLeftOf="@+id/tab9"
+        app:layout_constraintTop_toBottomOf="@+id/tab4" />
+
+    <TextView
+        android:id="@+id/tab9"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab9"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/tab8"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab4" />
+
+    <!-- packed chain -->
+    <!-- 链条内的元素将被捆在一起-->
+    <TextView
+        android:id="@+id/tab10"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="tab10:packed"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tab11"
+        app:layout_constraintTop_toBottomOf="@+id/tab7" />
+
+    <TextView
+        android:id="@+id/tab11"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="tab11"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@+id/tab10"
+        app:layout_constraintRight_toLeftOf="@+id/tab12"
+        app:layout_constraintTop_toBottomOf="@+id/tab7" />
+
+    <TextView
+        android:id="@+id/tab12"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab12"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@+id/tab11"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab7" />
+
+    <!-- packed chain with bias -->
+    <!--packed + bias- 前面说过bias是偏重的意思，这里就是将链条集体偏重。整体偏水平左一些 -->
+    <TextView
+        android:id="@+id/tab13"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="tab13:packed with bias"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tab14"
+        app:layout_constraintTop_toBottomOf="@+id/tab10" />
+
+    <TextView
+        android:id="@+id/tab14"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="tab14"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@+id/tab13"
+        app:layout_constraintRight_toLeftOf="@+id/tab15"
+        app:layout_constraintTop_toBottomOf="@+id/tab10" />
+
+    <TextView
+        android:id="@+id/tab15"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab15"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@+id/tab14"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab10" />
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+
+    <!--这个才是 barrier 的最好的使用案例-->
+
+    <!-- 参考： https://www.jowanxu.top/2018/01/15/Android-ConstraintLayout-Chains/-->

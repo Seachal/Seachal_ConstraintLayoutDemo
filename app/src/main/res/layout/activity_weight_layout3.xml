@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seachal.constraintlayoutdemo.WeightLayoutActivity">
+
+
+    <!-- 实现宽高一比一，并且按比例占用屏幕的空间   -->
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/red"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <Space-->
+<!--        android:id="@+id/spac"-->
+<!--        android:layout_width="2dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        layout_constraintStart_toEndOf-->
+<!--        />-->
+    <ImageView
+        android:id="@+id/iv_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="100dp"
+        android:background="@color/gray_4"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintLeft_toRightOf="@id/iv_1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

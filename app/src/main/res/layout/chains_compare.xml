@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+
+    <TextView
+        android:id="@+id/tab4"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="tab4"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tab5"
+        app:layout_constraintTop_toBottomOf="@+id/tab1" />
+
+    <TextView
+        android:id="@+id/tab5"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="tab5"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toRightOf="@+id/tab4"
+        app:layout_constraintRight_toLeftOf="@+id/tab6"
+        app:layout_constraintTop_toBottomOf="@+id/tab1" />
+
+    <TextView
+        android:id="@+id/tab6"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab6"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toRightOf="@+id/tab5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab1" />
+</android.support.constraint.ConstraintLayout>

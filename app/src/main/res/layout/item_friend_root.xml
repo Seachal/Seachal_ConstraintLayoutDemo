@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_head"
+        app:layout_constraintTop_toTopOf="@id/iv_head"
+        tools:text="234****2234" />
+
+
+    <TextView
+        android:id="@+id/lb_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="联系方式:"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@id/lb_wechat"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_goneMarginBottom="1dp" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLength="15"
+        android:singleLine="true"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/lb_phone"
+        app:layout_constraintLeft_toRightOf="@id/lb_phone"
+        app:layout_constraintTop_toTopOf="@id/lb_phone"
+
+        tools:text="1234567890211111" />
+
+
+    <TextView
+        android:id="@+id/lb_wechat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="微信号:"
+        android:textSize="12dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/lb_phone" />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
