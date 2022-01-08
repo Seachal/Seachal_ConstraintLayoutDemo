@@ -260,3 +260,6 @@ public class ConstraintSetActivity extends AppCompatActivity {
 ![constraintset](https://github.com/Seachal/Seachal_ConstraintLayoutDemo/blob/master/ScreenCapture/constraintset.gif)<br>
 
 
+----
+
+
